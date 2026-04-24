@@ -32,7 +32,7 @@
                         <Image Source="/Design/tglogo.png" Height="15" Width="15"/>
                     </Border>
 
-                    <Border Height="25" Width="25" Background="#FFC4302B" CornerRadius="3" Margin="5 0 0 0" Cursor="Hand" MouseLeftButtonDown="OpenTelegram">
+                    <Border Height="25" Width="25" Background="#FFC4302B" CornerRadius="3" Margin="5 0 0 0" Cursor="Hand" MouseLeftButtonDown="OpenYT">
                         <ui:SymbolIcon Symbol="Play48" Filled="True" Foreground="White"/>
                     </Border>
                 </StackPanel>
