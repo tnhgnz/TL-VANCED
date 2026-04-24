@@ -1,0 +1,58 @@
+<Window x:Class="TLVanced.InputSettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        mc:Ignorable="d"
+        Title="Инпут"
+        Height="420"
+        Width="420"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Loaded="WindowLoaded">
+    <Border BorderThickness="1" BorderBrush="#FF282828" Background="#FF141414" CornerRadius="3"
+            MouseLeftButtonDown="MoveWindow">
+        <Grid Margin="14">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <TextBlock Text="Инпут — мышь" VerticalAlignment="Center" FontSize="16"/>
+                <Button Width="32" Height="28" Padding="0" HorizontalAlignment="Right" Cursor="Hand"
+                        Click="CloseClick" ToolTip="Закрыть">
+                    <ui:SymbolIcon Symbol="Dismiss48" Filled="True" Foreground="White" FontSize="12"/>
+                </Button>
+            </Grid>
+
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="0 12 0 8">
+                <ItemsControl x:Name="optionsList">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="0 0 0 12">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding Title}" TextWrapping="Wrap" VerticalAlignment="Center"
+                                           Margin="0 0 12 0"/>
+                                <ui:ToggleSwitch Grid.Column="1" VerticalAlignment="Center"
+                                                 OnContent=""
+                                                 OffContent=""
+                                                 IsChecked="{Binding IsOn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+
+            <TextBlock x:Name="pathHint" Grid.Row="2" TextWrapping="Wrap" FontSize="11" Foreground="#FF9E9E9E"/>
+        </Grid>
+    </Border>
+</Window>
