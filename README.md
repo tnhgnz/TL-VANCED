@@ -122,13 +122,13 @@ dotnet build -c Release
 
 ---
 
-## Спасибо всем
+## Thank you all
 
-Если вам очень понравилась моя программа, вы можете подписаться на мои соцсети или швырнуть в меня свои грязные гроши!
+If you really liked my program, you can subscribe to my social networks or throw your dirty pennies at me!
 
 - [Twitch](https://www.twitch.tv/tnhgnz)
 - [YouTube](https://www.youtube.com/@Tnhgnz)
 - [Telegram](https://t.me/tnhgnz)
-- [Донат](https://www.donationalerts.com/r/tnhgnz)
+- [Donat](https://www.donationalerts.com/r/tnhgnz)
 
 ---
